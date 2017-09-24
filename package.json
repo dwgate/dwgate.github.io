@@ -1,0 +1,19 @@
+{
+  "name": "dwgate.github.io",
+  "version": "1.0.0",
+  "description": "John's personal website",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwgate/dwgate.github.io.git"
+  },
+  "author": "John Iaconis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwgate/dwgate.github.io/issues"
+  },
+  "homepage": "https://github.com/dwgate/dwgate.github.io#readme"
+}
