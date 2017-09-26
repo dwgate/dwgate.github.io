@@ -155,22 +155,30 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-
-.me-container {
-  border: 1px solid red;
-  height: 100px;
-  margin-bottom: 10%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 66%;
-          flex: 0 1 66%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  #me .me-container {
+    border: 1px solid red;
+    height: 100px;
+    margin-bottom: 10%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 66%;
+            flex: 0 1 66%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    #me .me-container .me-item {
+      border: 1px solid green;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 200px;
+              flex: 1 0 200px; }
+    #me .me-container .blurb {
+      -webkit-box-flex: 5;
+          -ms-flex: 5 5 200px;
+              flex: 5 5 200px; }
 
 /*--------------------LANDING--------------------*/
 /*--------------------PROJECTS--------------------*/

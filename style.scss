@@ -39,21 +39,26 @@ html {
   justify-content: center;
   align-items: center;
   display: flex;
-}
-.me-container {
-  border: 1px solid red;
-  height: 100px;
-  margin-bottom: 10%;
 
-  flex:0 1 66%;
+  .me-container {
+    border: 1px solid red;
+    height: 100px;
+    margin-bottom: 10%;
 
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.me-item {
-}
+    flex:0 1 66%;
 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .me-item {
+      border: 1px solid green;
+      flex: 1 0 200px;
+    }
+    .blurb {
+      flex:5 5 200px;
+    }
+  }
+}
 
 /*--------------------LANDING--------------------*/
 
