@@ -36,7 +36,11 @@ html {
   background: linear-gradient(0deg, $lightteal, $darkestteal);
   color: white;
 }
-.me-container {}
+.me-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /*--------------------LANDING--------------------*/
 
@@ -46,6 +50,7 @@ html {
   background-color: green;
 }
 .application-container {}
+
 
 /*--------------------PROJECTS--------------------*/
 
@@ -59,24 +64,30 @@ html {
 
 
 /*--------------------WORK EXPERIENCE--------------------*/
-#work-experience {
+#jobs {
   background-color: pink;
 }
-.work-experience-container {}
+.jobs-container {}
 /*--------------------WORK EXPERIENCE--------------------*/
 
 
 /*--------------------SCROLLING--------------------*/
 .hide {
-  height: 0px;
-  transition: height 0.5s ease-out;
+  height: 1px;
+  transition: height 1s ease-out;
   & > * {
     visibility: hidden;
+    opacity: 0.1;
   }
 }
 
 .focus {
-  height: 101vh;
-  transition: height 0.5s ease-out;
+  height: 102vh;
+  opacity: 1.0;
+  transition: all 1s ease-out;
+  // transition: opacity 1s ease-in;
 }
 /*--------------------SCROLLING--------------------*/
+
+
+

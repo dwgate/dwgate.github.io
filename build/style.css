@@ -147,6 +147,17 @@ html {
   background: linear-gradient(0deg, #376863, #132A27);
   color: white; }
 
+.me-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 /*--------------------LANDING--------------------*/
 /*--------------------PROJECTS--------------------*/
 #applications {
@@ -159,21 +170,23 @@ html {
 
 /*--------------------EDUCATION--------------------*/
 /*--------------------WORK EXPERIENCE--------------------*/
-#work-experience {
+#jobs {
   background-color: pink; }
 
 /*--------------------WORK EXPERIENCE--------------------*/
 /*--------------------SCROLLING--------------------*/
 .hide {
-  height: 0px;
-  -webkit-transition: height 0.5s ease-out;
-  transition: height 0.5s ease-out; }
+  height: 1px;
+  -webkit-transition: height 1s ease-out;
+  transition: height 1s ease-out; }
   .hide > * {
-    visibility: hidden; }
+    visibility: hidden;
+    opacity: 0.1; }
 
 .focus {
-  height: 101vh;
-  -webkit-transition: height 0.5s ease-out;
-  transition: height 0.5s ease-out; }
+  height: 102vh;
+  opacity: 1.0;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out; }
 
 /*--------------------SCROLLING--------------------*/
