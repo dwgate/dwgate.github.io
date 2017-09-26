@@ -302,7 +302,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 /*--------------------EDUCATION--------------------*/
 /*--------------------WORK EXPERIENCE--------------------*/
 #work-experience {
-  border: 5px solid orange;
+  border: 50px solid orange;
   background-color: #4B5352; }
 
 .work-experience-container {
