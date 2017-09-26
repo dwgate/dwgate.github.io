@@ -145,15 +145,29 @@ html {
 #me {
   background: -webkit-gradient(linear, left bottom, left top, from(#376863), to(#132A27));
   background: linear-gradient(0deg, #376863, #132A27);
-  color: white; }
-
-.me-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  color: white;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.me-container {
+  border: 1px solid red;
+  height: 100px;
+  margin-bottom: 10%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 66%;
+          flex: 0 1 66%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
@@ -161,32 +175,84 @@ html {
 /*--------------------LANDING--------------------*/
 /*--------------------PROJECTS--------------------*/
 #applications {
-  background-color: green; }
+  background-color: green;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.applications-container {
+  border: 1px solid red;
+  height: 100px;
+  margin-bottom: 10%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 66%;
+          flex: 0 1 66%; }
 
 /*--------------------PROJECTS--------------------*/
 /*--------------------EDUCATION--------------------*/
 #education {
-  background-color: purple; }
+  background-color: purple;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.education-container {
+  border: 1px solid red;
+  height: 100px;
+  margin-bottom: 10%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 66%;
+          flex: 0 1 66%; }
 
 /*--------------------EDUCATION--------------------*/
 /*--------------------WORK EXPERIENCE--------------------*/
 #jobs {
-  background-color: pink; }
+  background-color: pink;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.jobs-container {
+  border: 1px solid red;
+  height: 100px;
+  margin-bottom: 10%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 66%;
+          flex: 0 1 66%; }
 
 /*--------------------WORK EXPERIENCE--------------------*/
 /*--------------------SCROLLING--------------------*/
 .hide {
   height: 1px;
-  -webkit-transition: height 1s ease-out;
-  transition: height 1s ease-out; }
+  -webkit-transition: height 1s ease-out, opacity 1s ease-out;
+  transition: height 1s ease-out, opacity 1s ease-out; }
   .hide > * {
-    visibility: hidden;
-    opacity: 0.1; }
+    opacity: 0.0;
+    -webkit-transition: height 1s ease-out, opacity 1s ease-out;
+    transition: height 1s ease-out, opacity 1s ease-out; }
 
 .focus {
   height: 102vh;
   opacity: 1.0;
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out; }
+  -webkit-transition: height 1s ease-out, opacity 1s ease-in;
+  transition: height 1s ease-out, opacity 1s ease-in; }
 
 /*--------------------SCROLLING--------------------*/

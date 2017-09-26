@@ -35,12 +35,25 @@ html {
 #me {
   background: linear-gradient(0deg, $lightteal, $darkestteal);
   color: white;
-}
-.me-container {
-  display: flex;
+
   justify-content: center;
   align-items: center;
+  display: flex;
 }
+.me-container {
+  border: 1px solid red;
+  height: 100px;
+  margin-bottom: 10%;
+
+  flex:0 1 66%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.me-item {
+}
+
 
 /*--------------------LANDING--------------------*/
 
@@ -48,8 +61,18 @@ html {
 /*--------------------PROJECTS--------------------*/
 #applications {
   background-color: green;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
-.application-container {}
+.applications-container {
+  border: 1px solid red;
+  height: 100px;
+  margin-bottom: 10%;
+
+  flex:0 1 66%;
+}
 
 
 /*--------------------PROJECTS--------------------*/
@@ -58,34 +81,54 @@ html {
 /*--------------------EDUCATION--------------------*/
 #education {
   background-color: purple;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
-.education-container {}
+.education-container {
+  border: 1px solid red;
+  height: 100px;
+  margin-bottom: 10%;
+
+  flex:0 1 66%;
+}
 /*--------------------EDUCATION--------------------*/
 
 
 /*--------------------WORK EXPERIENCE--------------------*/
 #jobs {
   background-color: pink;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
-.jobs-container {}
+.jobs-container {
+  border: 1px solid red;
+  height: 100px;
+  margin-bottom: 10%;
+
+  flex:0 1 66%;
+}
 /*--------------------WORK EXPERIENCE--------------------*/
 
 
 /*--------------------SCROLLING--------------------*/
 .hide {
   height: 1px;
-  transition: height 1s ease-out;
+  transition: height 1s ease-out, opacity 1s ease-out;
   & > * {
-    visibility: hidden;
-    opacity: 0.1;
+    // visibility: hidden;
+    opacity: 0.0;
+    transition: height 1s ease-out, opacity 1s ease-out;
   }
 }
 
 .focus {
   height: 102vh;
   opacity: 1.0;
-  transition: all 1s ease-out;
-  // transition: opacity 1s ease-in;
+  transition: height 1s ease-out, opacity 1s ease-in;
 }
 /*--------------------SCROLLING--------------------*/
 
