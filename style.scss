@@ -18,169 +18,65 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 /* Box-sizing border-box */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.section {
-  height: 100vh;
-}
 
 /*--------------------GLOBAL--------------------*/
-
+html {
+  overflow: none;
+  scroll-y: none;
+}
+.app-wrapper {
+  overflow: hidden;
+}
+.content {
+  border: 1px solid rgba(0,0,0,0);
+}
 
 /*--------------------LANDING--------------------*/
 #me {
   background: linear-gradient(0deg, $lightteal, $darkestteal);
-  color: $lightgrey;
-
-  display: flex; // outermost container, holds center container
-  align-items: center;
-  justify-content: space-around;
+  color: white;
 }
-.me-container {
-  margin-bottom: 10%;
-
-  display: flex; // container for individual panels
-  flex: 0 1 66%;
-  flex-wrap: wrap;
-}
-.me-item {
-  background-color: rgba(0,0,0,0.1);
-  border-radius: 10px;
-  margin: 10px;
-  padding: 10px;
-  // individual content panels
-  flex: 1;
-}
-
-.blurb {
-  flex: 3;
-}
-.skills {
-  flex-basis: 100%;
-  span {
-    border: 1px solid black;
-    border-radius: 2px;
-    background-color: rgba(0,0,0,0.2);
-  }
-}
-.headshot {
-  border-radius: 100px;
-  width: 125px;
-  margin: auto;
-}
-.social {
-  display: flex;
-  justify-content: space-around;
-}
-.icon {
-  width: 25px;
-  &-link {
-  }
-}
+.me-container {}
 
 /*--------------------LANDING--------------------*/
 
 
-
 /*--------------------PROJECTS--------------------*/
 #applications {
-  background: linear-gradient(0deg, $darkestteal, $lightteal);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: green;
 }
+.application-container {}
 
-.applications-container {
-  margin-bottom: 20%;
-
-  display: flex;
-  justify-content: space-between;
-  flex-basis: 66%;
-}
-.application-item {
-  padding: 10px;
-  height: 400px;
- 
-  // container for each project
-  flex: 1;
-  display: flex;
-  justify-content: space-around;
-
-  //project(item) for non-hover 
-  .project-thumbnail {
-    height: 100px;
-    background-color: rgba(0,0,0,0.2);
-    border-radius: 10px;
-    padding: 10px;
-    img {
-      max-width: 200px;
-      max-height: 45px;
-    }
-  }
-
-  //project(item) for hover
-  .project-info {
-    background-color: rgba(0,0,0,0.2);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .project-info > * {
-
-  }
-}
-
-.hide-info {
-  display: none;
-}
 /*--------------------PROJECTS--------------------*/
-
 
 
 /*--------------------EDUCATION--------------------*/
 #education {
-  background: linear-gradient(0deg, $lightteal, $darkestteal);
-  border: 5px solid orange;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  background-color: purple;
 }
-.education-container {
-  border: 5px solid black;
-
-  display: flex;
-  flex: 0 1 66%;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-}
-.hr {
-  width: 60%;
-  margin-left: 20%;
-}
-.education-item {
-  img:not(.hr) {
-    width: 300px;
-  }
-}
-
-
+.education-container {}
 /*--------------------EDUCATION--------------------*/
-
 
 
 /*--------------------WORK EXPERIENCE--------------------*/
 #work-experience {
-  border: 50px solid orange;
-  background-color: $darkgrey;
+  background-color: pink;
 }
-.work-experience-container {
-  border: 5px solid black;
-
-}
-.work-experience-item {
-  border: 1px solid red;
-}
+.work-experience-container {}
 /*--------------------WORK EXPERIENCE--------------------*/
+
+
+/*--------------------SCROLLING--------------------*/
+.hide {
+  height: 0px;
+  transition: height 0.5s ease-out;
+  & > * {
+    visibility: hidden;
+  }
+}
+
+.focus {
+  height: 101vh;
+  transition: height 0.5s ease-out;
+}
+/*--------------------SCROLLING--------------------*/

@@ -1,20 +1,27 @@
 
-console.log('loaded');
-const projects = document.querySelectorAll('.application-item');
 
+const x = document.querySelector('.focus');
+window.addEventListener('scroll', () => test());
 
-projects.forEach(project => project.addEventListener('mouseenter', showProjectInfo));
-projects.forEach(project => project.addEventListener('mouseleave', hideProjectInfo));
+let prevLocation = 0;
+let displayIndex = 0;
 
+function test() {
+  console.log(window.scrollY);
+  const me = document.getElementById('me');
+  const apps = document.getElementById('applications');
+  if (window.scrollY > prevLocation) {
+    me.classList.remove('focus');
+    me.classList.add('hide');
 
-function showProjectInfo() {
-  this.children[0].classList.add('hide-info');
-  this.children[1].classList.remove('hide-info');
-  this.children[1].classList.add('project-info');
-}
+    apps.classList.remove('hide');
+    apps.classList.add('focus');
+  } else {
+    apps.classList.remove('focus');
+    apps.classList.add('hide');
 
-function hideProjectInfo() {
-  this.children[0].classList.remove('hide-info');
-  this.children[1].classList.add('hide-info');
-  this.children[1].classList.remove('project-info');
+    me.classList.remove('hide');
+    me.classList.add('focus');
+  }
+  prevLocation = window.scrollY;
 }
