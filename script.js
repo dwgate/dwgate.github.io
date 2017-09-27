@@ -8,7 +8,7 @@ let displayIndex = 0;
 var previousPosition = window.pageYOffset || document.documentElement.scrollTop;
 
 setTimeout(() => debounce(
-  window.onscroll = function() {
+  window.onscroll = function(e) {
     const currentPosition = window.pageYOffset || document.documentElement.scrollTop;
 
     if (previousPosition > currentPosition) {
