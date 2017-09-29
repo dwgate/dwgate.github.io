@@ -139,8 +139,11 @@ html {
 .app-wrapper {
   overflow: hidden; }
 
-.content {
-  border: 1px solid transparent; }
+/* .content {
+  border: 1px solid rgba(0,0,0,0);
+} */
+.icon {
+  width: 25px; }
 
 /*--------------------LANDING--------------------*/
 #me {
@@ -156,13 +159,12 @@ html {
   -ms-flex-pack: distribute;
       justify-content: space-around; }
   #me .me-container {
-    border: 1px solid red;
     margin-bottom: 10%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     #me .me-container .me-item {
       border: 1px solid green;
       border-radius: 10px;
@@ -185,8 +187,8 @@ html {
       display: flex;
       -ms-flex-pack: distribute;
           justify-content: space-around; }
-      #me .me-container .social .icon {
-        width: 25px; }
+    #me .me-container .icon {
+      width: 25px; }
     #me .me-container .skills {
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%; }
@@ -194,71 +196,120 @@ html {
         border: 1px solid black;
         border-radius: 2px;
         background-color: rgba(0, 0, 0, 0.2); }
-
-.headshot {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .headshot img {
-    border-radius: 100px;
-    width: 125px;
-    margin: auto; }
-
-.icon {
-  width: 25px; }
+  #me .headshot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    #me .headshot img {
+      border-radius: 100px;
+      width: 125px;
+      margin: auto; }
 
 /*--------------------LANDING--------------------*/
 /*--------------------PROJECTS--------------------*/
 #applications {
-  background-color: green;
+  background: -webkit-gradient(linear, left bottom, left top, from(#132A27), to(#376863));
+  background: linear-gradient(0deg, #132A27, #376863);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+          align-items: center; }
+  #applications .applications-container {
+    height: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-preferred-size: 66%;
+        flex-basis: 66%; }
+    #applications .applications-container .project-thumbnails {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+      #applications .applications-container .project-thumbnails img {
+        border-radius: 25px;
+        max-width: 200px;
+        max-height: 45px;
+        margin: 0 10px; }
+    #applications .applications-container .project-descriptions {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%; }
+      #applications .applications-container .project-descriptions .project-info {
+        border: 1px solid black;
+        background-color: rgba(0, 0, 0, 0.2);
+        opacity: 1.0;
+        border-radius: 10px;
+        -webkit-transition: opacity 1s ease-in;
+        transition: opacity 1s ease-in;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+        -webkit-box-ordinal-group: 1;
+            -ms-flex-order: 0;
+                order: 0; }
+      #applications .applications-container .project-descriptions .hide-info {
+        opacity: 0;
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
+        -webkit-transition: opacity 1s ease-out;
+        transition: opacity 1s ease-out; }
+        #applications .applications-container .project-descriptions .hide-info > * {
+          opacity: 0; }
 
-.applications-container {
-  border: 1px solid red;
-  margin-bottom: 10%;
+/*--------------------PROJECTS--------------------*/
+/*--------------------EDUCATION--------------------*/
+#background {
+  background: -webkit-gradient(linear, left bottom, left top, from(#376863), to(#132A27));
+  background: linear-gradient(0deg, #376863, #132A27);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-preferred-size: 66%;
-      flex-basis: 66%; }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
-.applications-item {
-  padding: 10px;
-  height: 400px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1; }
-
-.project-thumbnail {
-  height: 100px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  padding: 10px; }
-  .project-thumbnail img {
-    max-width: 200px;
-    max-height: 45px; }
-
-.project-info {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+.background-container {
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,39 +317,62 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-
-.hide-info {
-  display: none; }
-
-/*--------------------PROJECTS--------------------*/
-/*--------------------EDUCATION--------------------*/
-#education {
-  background-color: purple;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.education-container {
-  border: 1px solid red;
-  height: 100px;
-  margin-bottom: 10%;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 66%;
           flex: 0 1 66%; }
+  .background-container img {
+    width: 100px; }
+  .background-container .work-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+    .background-container .work-container .work-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+  .background-container .school-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+    .background-container .school-container .school-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+  .background-container .hidden-details {
+    width: 0;
+    opacity: 0; }
+    .background-container .hidden-details > * {
+      opacity: 0; }
 
 /*--------------------EDUCATION--------------------*/
+.test2 {
+  opacity: 0;
+  width: 0; }
+
 /*--------------------WORK EXPERIENCE--------------------*/
 #jobs {
   background-color: pink;

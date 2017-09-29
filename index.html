@@ -9,7 +9,7 @@
 <body>
   <div class="app-wrapper">
 
-    <div class="focus content" id="me">
+    <div class="hide page" id="me">
       <div class="me-container">
 
         <div class="me-item">
@@ -19,7 +19,7 @@
           </div>
           <div class="social">
             <a href="https://www.linkedin.com/in/johniaconis/">
-              <img class="icon" alt="linkedIn"  src="assets/linkedin-icon.png"/>
+              <img class="icon" alt="linkedIn"  src="assets/linkedin-icon.png" />
             </a>
             <a href="https://github.com/dwgate">
               <img class="icon" alt="GitHub"  src="assets/github-icon.png" />
@@ -39,10 +39,9 @@
         </div>
 
         <div class="me-item blurb">
-          <p>I started out my journey as a designer, but quickly discovered that my true passion life in making. I wanted to create, I wanted to build, I wanted to design things and make them a reality.<br></br>
+          <p>I began my journey as a designer, but quickly discovered that my true passion life is making. I wanted to create, I wanted to build, I wanted to design things and make them a reality.<br></br>
           I fortunately discovered the world of software engineering, and have found an intense passion for designing and building user interfaces and crafting user experiences. It is here where I believe the two realms of design and engineering cross paths, and where I can apply my skills to the their highest capacity.<br></br>
-          I am an avid gamer and lover of literature. When i'm not writing code, theres a good chance I'm deep into one of the latter. 
-        </p>
+          I am an avid gamer and lover of literature. When i'm not writing code, theres a good chance I'm deep into one of the latter.</p>
         </div>
 
         <div class="me-item skills">
@@ -52,14 +51,32 @@
       </div>
     </div>
 
-    <div class="hide content" id="applications">
+
+
+
+
+
+
+    <div class="hide page" id="applications">
       <div class="applications-container">
         
-        <div data-project="moodify" class="application-item">
-          <div class="project-thumbnail">
-            <img alt="Moodify Logo" src="assets/moodify-logo.png" />
+        <div class="project-thumbnails">
+
+          <div class="thumbnail-img">
+            <img data-thumbnum="0" alt="Moodify Logo" src="assets/moodify-logo.png" />
           </div>
-          <div class="hide-info"><!--WILL RECEIVE PROJECT-INFO CLASS -->
+          <div class="thumbnail-img">
+            <img data-thumbnum="1" alt="Hault Logo" src="assets/hault-logo.png" />
+          </div>
+          <div class="thumbnail-img">
+            <img data-thumbnum="2" alt="LePlonger Logo" src="assets/leplonger-logo.png" />
+          </div>
+          
+        </div>
+
+        <div class="project-descriptions">
+
+          <div data-pnum="0" class="hide-info"><!--WILL RECEIVE PROJECT-INFO CLASS -->
             <p>Moodify is a web application that the LePlonger team inherited. Moodify provided mood and tone analysis of music. We integrated authorization with Spotify and expanded the mood analysis functionality to analyze text based media.</p>
             <div>
               test dive
@@ -69,57 +86,101 @@
               <img class="icon" alt="GitHub"  src="assets/github-icon.png" />
             </a>
           </div>
-        </div>
 
-        <div data-project="hault" class="application-item">
-          <div class="project-thumbnail">
-            <img alt="Hault Logo" src="assets/hault-logo.png" />
-          </div>
-          <div class="hide-info"><!--WILL RECEIVE PROJECT-INFO CLASS -->
+          <div data-pnum="1" class="hide-info"><!--WILL RECEIVE PROJECT-INFO CLASS -->
             <p>Hault is a two part web application. The Google Chrome extension keep local history clear of content, and send it to an extenrnal database along with content of visited pages. The extension keeps track of your tabs during a session allowing you to continue a session from any computer on any browser. From the web client, users have access to their history vault, from where they can manage, organize, and search their visited content.</p>
-            <div>
-              test dive
-            </div>
             <a href="http://bit.ly/2vJLPrg">Check it out here!</a>
             <a href="https://github.com/teamrocketz">
               <img class="icon" alt="GitHub"  src="assets/github-icon.png" />
             </a>
           </div>
-        </div>
 
-        <div data-project="leplonger" class="application-item">
-          <div class="project-thumbnail">
-            <img alt="LePlonger Logo" src="assets/leplonger-logo.png" />
-          </div>
-          <div class="hide-info"><!--WILL RECEIVE PROJECT-INFO CLASS -->
+          <div data-pnum="2" class="hide-info"><!--WILL RECEIVE PROJECT-INFO CLASS -->
             <p>LePlonger is a West Coast scuba diver's companion. LePlonger provides accurate dive site weather and ocean conditions based on data from the nearest ocean buoy directly from the National Data Buoy Center. Members can add new dive sites they've visited, and share their experiences with others.</p>
-            <div>
-              test dive
-            </div>
             <a href="http://bit.ly/2xi5UUU">Check it out here!</a>
             <a href="https://github.com/dwgate/leplonger">
               <img class="icon" alt="GitHub"  src="assets/github-icon.png" />
             </a>
           </div>
+
         </div>
         
       </div>
     </div>
 
-    <div class="hide content" id="education">
-      <div class="education-container">
 
 
 
 
+
+
+    <div class="focus page" id="background">
+      <div class="background-container">
+        <div class="work-container">
+
+          <div class="work-item">
+            <div data-place="0" class="details">
+              <img alt="HR" src="assets/hr.png"/>
+            </div>
+            <div data-place="0" class="hidden-details">
+              Hack Reactor txt
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div data-place="1" class="details">
+              <img alt="ASD" src="assets/asd.png"/>
+            </div>
+            <div data-place="1" class="hidden-details">
+              ASD|SKY txt
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div data-place="cc" class="details">
+              <img alt="ASD" src="assets/cc.png"/>
+            </div>
+            <div data-place="cc" class="hidden-details">
+              Cooper Carry txt
+            </div>
+          </div>
+
+        </div>
+
+        <div class="school-container">
+
+          <div class="school-item">
+            <div data-place="hr" class="details">
+              <img alt="HR" src="assets/hr.png"/>
+            </div>
+            <div data-place="hr" class="hidden-details">
+              Hack Reactor
+            </div>
+          </div>
+
+          <div class="school-item">
+            <div data-place="vt" class="details">
+              <img alt="Virginia Tech" src="assets/vt.png"/>
+            </div>
+            <div data-place="vt" class="hidden-details">
+              Virginia Tech
+            </div>
+          </div>
+
+          <div class="school-item">
+            <div data-place="cbl" class="details">
+              <img alt="Design/build Lab" src="assets/dbl.png"/>
+            </div>
+            <div data-place="dbl" class="hidden-details">
+              Design build
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
 
-    <div class="hide content" id="jobs">
-      <div class="jobs-container">
-        <p>Hi its job</p>
-      </div>
-    </div>
+
 
 
   </div>

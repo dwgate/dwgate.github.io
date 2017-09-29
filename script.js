@@ -1,8 +1,8 @@
-const maxDisplayIndex = document.querySelectorAll('.content').length - 1;
-const sections = document.querySelectorAll('.content');
+const sections = document.querySelectorAll('.page');
+const maxDisplayIndex = sections.length - 1;
 window.scrollY = 0;
 // window.addEventListener('scroll', debounce(test, 700));
-
+// on transitionend for scroll, then move scroll position. remove from inside event
 let prevLocation = window.pageYOffset || document.documentElement.scrollTop;
 let displayIndex = 0;
 var previousPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -40,6 +40,52 @@ const adjustContent = debounce(function(direction) {
     }
   });
 }, 400);
+
+
+
+/*projects*/
+const thumbnailImg = document.querySelectorAll('.thumbnail-img img');
+const projectDescriptions = Array.from(document.querySelectorAll('.project-descriptions')[0].children);
+const projectInfoSections = document.querySelectorAll('.project-descriptions');
+
+projectInfoSections.forEach(project => project.addEventListener('mouseleave', hideDescriptions));
+thumbnailImg.forEach(nail => nail.addEventListener('mouseenter', hoverProject) );
+
+function hoverProject() {
+  const index = this.dataset.thumbnum;
+  projectDescriptions.forEach((project, i) => {
+    if (project.dataset.pnum === index) {
+      project.classList.remove('hide-info');
+      project.classList.add('project-info');
+    } else {
+      project.classList.add('hide-info');
+      project.classList.remove('project-info');
+    }
+  });
+}
+
+function hideDescriptions() {
+  projectDescriptions.forEach(project => {
+    project.classList.remove('project-info');
+    project.classList.add('hide-info');
+  });
+}
+
+
+
+const backgrounds = document.querySelectorAll('#background .work-item, .school-item');
+backgrounds.forEach(place => place.addEventListener('mouseenter', toggleInfo));
+backgrounds.forEach(place => place.addEventListener('mouseenter', hideBackground));
+
+
+function toggleInfo() {
+  console.log('fuck');
+}
+
+
+
+
+
 
 
 
