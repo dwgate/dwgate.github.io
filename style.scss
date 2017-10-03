@@ -7,6 +7,8 @@ $lightteal: #376863;
 $darkteal: #264F4B;
 $darkestteal: #132A27;
 
+$background: #2a2a2a;
+
 $roboto: 'Roboto', sans-serif;
 $sansPro: 'Source Sans Pro', sans-serif;
 /*--------------------VARIABLES--------------------*/
@@ -41,21 +43,20 @@ html {
 
 /*--------------------LANDING--------------------*/
 #me {
-  background: linear-gradient(0deg, $lightteal, $darkestteal);
-  color: white;
+  background-color: $background;
 
   display: flex; // Container flex
   align-items: center;
   justify-content: space-around;
   .me-container {
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 
     display: flex; // Container flex
     flex-wrap: wrap;
     .me-item {
-      border: 1px solid green;
+      border: 1px solid white;
+      background-color: rgba(255,255,255,0.5);
       border-radius: 10px;
-      background-color: rgba(0,0,0,0.1);
       width: 200px;
       & + img {
         margin: 0 50%;
@@ -72,15 +73,33 @@ html {
       display: flex; // Container flex
       justify-content: space-around;
     }
+    a:nth-child(3) {
+        margin-top: 3px;
+      }
     .icon {
       width: 25px;
     }
     .skills {
-      flex-basis: 100%;
+      border: none;
+      background-color: rgba(0,0,0,0);
+      flex-basis: 100%; // Item flex
+      height: 30%;
+      justify-content: center;
+
+      display: flex; // Container flex
+      flex-wrap: wrap;
       span {
-        border: 1px solid black;
-        border-radius: 2px;
-        background-color: rgba(0,0,0,0.2);
+        background-color: rgba(255,255,255,0.5);
+        border: 1px solid white;
+        border-radius: 100px;
+        margin: 5px;
+
+        height: 50px;
+        width: 50px;
+        transition: transform 0.2s cubic-bezier(0.45, 0.62, 0.84, 2.15);
+        img {
+          margin: 25%;
+        }
       }
     }
   }
@@ -101,7 +120,7 @@ html {
 
 /*--------------------PROJECTS--------------------*/
 #applications {
-  background: linear-gradient(0deg, $darkestteal, $lightteal);
+  background-color: $background;
 
   display: flex; // Container flex
   justify-content: center;
@@ -117,6 +136,7 @@ html {
     .project-thumbnails {
       display: flex; // Container flex
       justify-content: space-around;
+      margin-bottom: 25px;
 
       flex: 1; // Item flex
       img {
@@ -133,18 +153,37 @@ html {
       flex-basis: 100%; // Item flex
 
       .project-info {
-        border: 1px solid black;
-        background-color: rgba(0,0,0,0.2);
+        border: 1px solid white;
+        background-color: rgba(255,255,255,0.5);
+        text-align: left;
+        
         opacity: 1.0;
-        border-radius: 10px;
+        border-radius: 10px 20px;
         transition: opacity 1s ease-in;
 
         display: flex; // Container flex
         align-items: center;
-        flex-direction: column;
+        // flex-direction: column;
 
         flex-basis: 100%; // Item flex
         order: 0;
+        padding: 10px;
+
+        .project-item {
+          flex: 1;
+        }
+        .resources > a,p {
+          text-align: center;
+          margin: auto;
+          display: block;
+          padding: 5px 0;
+        }
+        .test3 {
+          max-width: 400px;
+          border: 1px solid black;
+          border-radius: 10px;
+          box-shadow: 5px 5px 11px 0px #424242;
+        }
       }
       .hide-info {
         opacity: 0;
@@ -163,7 +202,7 @@ html {
 
 /*--------------------EDUCATION--------------------*/
 #background {
-  background: linear-gradient(0deg, $lightteal, $darkestteal);
+  background-color: $background;
 
   display: flex; // Container flex
   justify-content: center;
@@ -171,7 +210,7 @@ html {
 }
 .background-container {
   // border: 1px solid red;
-  height: 80%;
+  height: 70%;
   img {
     width: 100px;
   }
@@ -187,7 +226,20 @@ html {
 
     flex: 1; // Item flex
     .work-item {
-      // border: 2px solid black;
+      border: 1px solid white;
+      border-radius: 20px;
+      color: white;
+      background-color: rgba(0,0,0,0.2);
+      margin: 35px;
+      padding: 10px;
+
+      &:hover {
+        background-color: rgba(255,255,255,0.5);
+        color: black;
+        transform: scale(1.15, 1.15);
+        transition: transform 0.2s ease-in, border 0.2s ease-in;
+      }
+
 
       display: flex; // Container flex
       justify-content: center;
@@ -198,13 +250,23 @@ html {
   }
     
   .school-container {
-    // border: 2px solid green;
-    
     display: flex; // Container flex
 
     flex: 1; // Item flex
     .school-item {
-      // border: 2px solid black;
+      border: 1px solid white;
+      border-radius: 20px;
+      background-color: rgba(0,0,0,0.2);
+      color: white;
+      margin: 35px;
+      padding: 10px;
+
+      &:hover {
+        background-color: rgba(255,255,255,0.5);
+        color: black;
+        transform: scale(1.15, 1.15);
+        transition: transform 0.2s ease-in, border 0.2s ease-in;
+      } 
 
       display: flex; // Container flex
       justify-content: center;
@@ -214,9 +276,11 @@ html {
     }
   }
 
-  .details {
-
-  }
+  // .grow {
+  //   transform: scale(1.15, 1.15);
+  //   transition: transform 0.2s ease-in, border 0.2s ease-in;
+  // }
+ 
   .hidden-details {
     width: 0;
     opacity: 0;
@@ -226,37 +290,14 @@ html {
   }
 }
 /*--------------------EDUCATION--------------------*/
-.test2 {
-  opacity: 0;
-  width: 0;
-}
-
-
-
-/*--------------------WORK EXPERIENCE--------------------*/
-#jobs {
-  background-color: pink;
-
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.jobs-container {
-  border: 1px solid red;
-  height: 100px;
-  margin-bottom: 10%;
-
-  flex:0 1 66%;
-}
-/*--------------------WORK EXPERIENCE--------------------*/
 
 
 /*--------------------SCROLLING--------------------*/
 .hide {
   height: 1px;
+  visibility: none;
   transition: height 1s ease-out, opacity 0.5s ease-out;
   & > * {
-    // visibility: hidden;
     opacity: 0.0;
     transition: height 1s ease-out, opacity 0.5s ease-out;
   }

@@ -147,9 +147,7 @@ html {
 
 /*--------------------LANDING--------------------*/
 #me {
-  background: -webkit-gradient(linear, left bottom, left top, from(#376863), to(#132A27));
-  background: linear-gradient(0deg, #376863, #132A27);
-  color: white;
+  background-color: #2a2a2a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,16 +157,16 @@ html {
   -ms-flex-pack: distribute;
       justify-content: space-around; }
   #me .me-container {
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
     #me .me-container .me-item {
-      border: 1px solid green;
+      border: 1px solid white;
+      background-color: rgba(255, 255, 255, 0.5);
       border-radius: 10px;
-      background-color: rgba(0, 0, 0, 0.1);
       width: 200px;
       margin: 10px;
       padding: 10px;
@@ -187,15 +185,37 @@ html {
       display: flex;
       -ms-flex-pack: distribute;
           justify-content: space-around; }
+    #me .me-container a:nth-child(3) {
+      margin-top: 3px; }
     #me .me-container .icon {
       width: 25px; }
     #me .me-container .skills {
+      border: none;
+      background-color: transparent;
       -ms-flex-preferred-size: 100%;
-          flex-basis: 100%; }
+          flex-basis: 100%;
+      height: 30%;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
       #me .me-container .skills span {
-        border: 1px solid black;
-        border-radius: 2px;
-        background-color: rgba(0, 0, 0, 0.2); }
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 1px solid white;
+        border-radius: 100px;
+        margin: 5px;
+        height: 50px;
+        width: 50px;
+        -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.45, 0.62, 0.84, 2.15);
+        transition: -webkit-transform 0.2s cubic-bezier(0.45, 0.62, 0.84, 2.15);
+        transition: transform 0.2s cubic-bezier(0.45, 0.62, 0.84, 2.15);
+        transition: transform 0.2s cubic-bezier(0.45, 0.62, 0.84, 2.15), -webkit-transform 0.2s cubic-bezier(0.45, 0.62, 0.84, 2.15); }
+        #me .me-container .skills span img {
+          margin: 25%; }
   #me .headshot {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -215,8 +235,7 @@ html {
 /*--------------------LANDING--------------------*/
 /*--------------------PROJECTS--------------------*/
 #applications {
-  background: -webkit-gradient(linear, left bottom, left top, from(#132A27), to(#376863));
-  background: linear-gradient(0deg, #132A27, #376863);
+  background-color: #2a2a2a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,6 +262,7 @@ html {
       display: flex;
       -ms-flex-pack: distribute;
           justify-content: space-around;
+      margin-bottom: 25px;
       -webkit-box-flex: 1;
           -ms-flex: 1;
               flex: 1; }
@@ -262,10 +282,11 @@ html {
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%; }
       #applications .applications-container .project-descriptions .project-info {
-        border: 1px solid black;
-        background-color: rgba(0, 0, 0, 0.2);
+        border: 1px solid white;
+        background-color: rgba(255, 255, 255, 0.5);
+        text-align: left;
         opacity: 1.0;
-        border-radius: 10px;
+        border-radius: 10px 20px;
         -webkit-transition: opacity 1s ease-in;
         transition: opacity 1s ease-in;
         display: -webkit-box;
@@ -274,15 +295,27 @@ html {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
         -webkit-box-ordinal-group: 1;
             -ms-flex-order: 0;
-                order: 0; }
+                order: 0;
+        padding: 10px; }
+        #applications .applications-container .project-descriptions .project-info .project-item {
+          -webkit-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1; }
+        #applications .applications-container .project-descriptions .project-info .resources > a, #applications .applications-container .project-descriptions .project-info p {
+          text-align: center;
+          margin: auto;
+          display: block;
+          padding: 5px 0; }
+        #applications .applications-container .project-descriptions .project-info .test3 {
+          max-width: 400px;
+          border: 1px solid black;
+          border-radius: 10px;
+          -webkit-box-shadow: 5px 5px 11px 0px #424242;
+                  box-shadow: 5px 5px 11px 0px #424242; }
       #applications .applications-container .project-descriptions .hide-info {
         opacity: 0;
         -webkit-box-ordinal-group: 2;
@@ -296,8 +329,7 @@ html {
 /*--------------------PROJECTS--------------------*/
 /*--------------------EDUCATION--------------------*/
 #background {
-  background: -webkit-gradient(linear, left bottom, left top, from(#376863), to(#132A27));
-  background: linear-gradient(0deg, #376863, #132A27);
+  background-color: #2a2a2a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,7 +341,7 @@ html {
           align-items: center; }
 
 .background-container {
-  height: 80%;
+  height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -330,6 +362,12 @@ html {
         -ms-flex: 1;
             flex: 1; }
     .background-container .work-container .work-item {
+      border: 1px solid white;
+      border-radius: 20px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.2);
+      margin: 35px;
+      padding: 10px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -342,6 +380,15 @@ html {
       -webkit-box-flex: 1;
           -ms-flex: 1;
               flex: 1; }
+      .background-container .work-container .work-item:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: black;
+        -webkit-transform: scale(1.15, 1.15);
+                transform: scale(1.15, 1.15);
+        -webkit-transition: border 0.2s ease-in, -webkit-transform 0.2s ease-in;
+        transition: border 0.2s ease-in, -webkit-transform 0.2s ease-in;
+        transition: transform 0.2s ease-in, border 0.2s ease-in;
+        transition: transform 0.2s ease-in, border 0.2s ease-in, -webkit-transform 0.2s ease-in; }
   .background-container .school-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -350,6 +397,12 @@ html {
         -ms-flex: 1;
             flex: 1; }
     .background-container .school-container .school-item {
+      border: 1px solid white;
+      border-radius: 20px;
+      background-color: rgba(0, 0, 0, 0.2);
+      color: white;
+      margin: 35px;
+      padding: 10px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -362,6 +415,15 @@ html {
       -webkit-box-flex: 1;
           -ms-flex: 1;
               flex: 1; }
+      .background-container .school-container .school-item:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: black;
+        -webkit-transform: scale(1.15, 1.15);
+                transform: scale(1.15, 1.15);
+        -webkit-transition: border 0.2s ease-in, -webkit-transform 0.2s ease-in;
+        transition: border 0.2s ease-in, -webkit-transform 0.2s ease-in;
+        transition: transform 0.2s ease-in, border 0.2s ease-in;
+        transition: transform 0.2s ease-in, border 0.2s ease-in, -webkit-transform 0.2s ease-in; }
   .background-container .hidden-details {
     width: 0;
     opacity: 0; }
@@ -369,35 +431,10 @@ html {
       opacity: 0; }
 
 /*--------------------EDUCATION--------------------*/
-.test2 {
-  opacity: 0;
-  width: 0; }
-
-/*--------------------WORK EXPERIENCE--------------------*/
-#jobs {
-  background-color: pink;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.jobs-container {
-  border: 1px solid red;
-  height: 100px;
-  margin-bottom: 10%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 66%;
-          flex: 0 1 66%; }
-
-/*--------------------WORK EXPERIENCE--------------------*/
 /*--------------------SCROLLING--------------------*/
 .hide {
   height: 1px;
+  visibility: none;
   -webkit-transition: height 1s ease-out, opacity 0.5s ease-out;
   transition: height 1s ease-out, opacity 0.5s ease-out; }
   .hide > * {

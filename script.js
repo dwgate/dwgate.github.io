@@ -72,19 +72,55 @@ function hideDescriptions() {
 }
 
 
+const experienceItems = document.querySelectorAll('.work-item, .school-item');
 
-const backgrounds = document.querySelectorAll('#background .work-item, .school-item');
-backgrounds.forEach(place => place.addEventListener('mouseenter', toggleInfo));
-backgrounds.forEach(place => place.addEventListener('mouseenter', hideBackground));
+experienceItems.forEach(logo => logo.addEventListener('mouseenter', function() {
+  const currentHover = this.children[0].dataset.place;
+  this.children[0].classList.remove('details');
+  this.children[0].classList.add('hidden-details');
+
+  // this.classList.add('grow');
+
+  experienceItems.forEach((place) => {
+    const icon = place.children[0];
+    const worko = icon.dataset.place;
+    const description = place.children[1];
+    if (worko === currentHover) {
+      place.children[1].classList.remove('hidden-details');
+      place.children[1].classList.add('details');
+    }
+  });
+}));
+
+experienceItems.forEach(logo => logo.addEventListener('mouseleave', function() {
+  const currentHover = this.children[0].dataset.place;
+  this.children[0].classList.add('details');
+  this.children[0].classList.remove('hidden-details');
+
+  // this.classList.remove('grow');
+
+  experienceItems.forEach((place) => {
+    const icon = place.children[0];
+    const worko = icon.dataset.place;
+    const description = place.children[1];
+    if (worko === currentHover) {
+      place.children[1].classList.add('hidden-details');
+      place.children[1].classList.remove('details');
+    }
+  });
+}));
+
+const skills = document.querySelectorAll('.skills > span');
+skills.forEach(skill => skill.addEventListener('mouseenter', expandSkill, true));
+skills.forEach(skill => skill.addEventListener('mouseleave', shrinkSkill, true));
 
 
-function toggleInfo() {
-  console.log('fuck');
+function expandSkill() {
+  this.style.transform = 'scale(1.2, 1.2)';
 }
-
-
-
-
+function shrinkSkill() {
+  this.style.transform = 'scale(1, 1)';
+}
 
 
 
@@ -106,48 +142,3 @@ function debounce(func, wait = 20, immediate = true) {
     if (callNow) func.apply(context, args);
   };
 }
-
-// function test(e) {
-  // const currentLocation = window.pageYOffset || document.documentElement.scrollTop;
-
-  // if (currentLocation >= prevLocation) {
-  //   displayIndex++;
-  //   if (displayIndex < 0) { displayIndex = 0; }
-  // } else {
-  //   displayIndex--;
-  //   if (displayIndex > maxDisplayIndex) { displayIndex--; }
-  // }
-
-  // Array.from(sections).forEach((section, i) => {
-  //   if (i === displayIndex) {
-  //     section.classList.add('focus');
-  //     section.classList.remove('hide');
-  //   } else {
-  //     section.classList.add('hide');
-  //     section.classList.remove('focus');
-  //   }
-  // });
-
-  // prevLocation = currentLocation;
-  // const visible = document.querySelector('.focus');
-
-  // window.scrollTo(0, 2);
-// }
-
-
-  // const me = document.getElementById('me');
-  // const apps = document.getElementById('applications');
-  // if (window.scrollY > prevLocation) {
-  //   me.classList.remove('focus');
-  //   me.classList.add('hide');
-
-  //   apps.classList.remove('hide');
-  //   apps.classList.add('focus');
-  // } else {
-  //   apps.classList.remove('focus');
-  //   apps.classList.add('hide');
-
-  //   me.classList.remove('hide');
-  //   me.classList.add('focus');
-  // }
-  // prevLocation = window.scrollY;
