@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/dwgate/dwgate.github.io/issues"
   },
-  "homepage": "https://github.com/dwgate/dwgate.github.io#readme"
+  "homepage": "https://github.com/dwgate/dwgate.github.io#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0"
+  }
 }

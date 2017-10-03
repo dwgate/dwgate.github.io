@@ -2,8 +2,247 @@
 <html>
 <head>
   <title>John Iaconis' personal website</title>
+  <link rel="stylesheet" href="build/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300|Source+Sans+Pro:300" rel="stylesheet">
 </head>
+
 <body>
-  <p>Coming soon!</p>
+  <div class="app-wrapper">
+
+    <div class="focus page" id="me">
+      <div class="me-container">
+
+        <div class="me-item">
+          <div class="headshot">
+            <img alt="headshot" src="assets/headshot-crop.jpg" />
+            <p>John Iaconis</p>
+          </div>
+          <div class="social">
+            <a href="https://www.linkedin.com/in/johniaconis/">
+              <img class="icon" alt="linkedIn"  src="assets/linkedin-icon.png" />
+            </a>
+            <a href="https://github.com/dwgate">
+              <img class="icon" alt="GitHub"  src="assets/github-icon.png" />
+            </a>
+            <a href="mailto:john.t.iaconis@gmail.com">
+              <img class="icon" alt="Email"  src="assets/email.png" />
+            </a>
+          </div>
+          <a class="social" href="assets/John Iaconis Resume_.pdf" target="_blank">Resume</a> 
+        </div>
+
+        <div class="me-item">
+          <h3>Contact Me</h3>
+          <p>Email:</p> 
+          <p>john.t.iaconis@gmail.com</p>
+          <p>Phone:</p>
+          <p>(315)382-0684</p>
+        </div>
+
+        <div class="me-item blurb">
+          <p>My journey began as a designer, but it didn't take me long to discover my passion is making. I wanted to create, I wanted to build, I wanted to design things and make them a reality.<br></br>
+          I fortunately discovered the world of software engineering, and have found an intense passion for designing and building user interfaces and crafting user experiences. It is here where I believe the two realms of design and engineering cross paths, and where I can apply my skills to the their highest capacity.<br></br>
+          I am an avid gamer and lover of literature. When i'm not writing code, theres a good chance I'm deep into one of the latter.</p>
+        </div>
+
+        <div class="me-item skills">
+          <span><img class="icon" src="assets/skills/small/bookshelf.png" /></span>
+          <span><img class="icon" src="assets/skills/small/chai.png" /></span>
+          <span><img class="icon" src="assets/skills/small/css.png" /></span>
+          <span><img class="icon" src="assets/skills/small/express.png" /></span>
+          <span><img class="icon" src="assets/skills/small/git.png" /></span>
+          <span><img class="icon" src="assets/skills/small/gulp.png" /></span>
+          <span><img class="icon" src="assets/skills/small/heroku.png" /></span>
+          <span><img class="icon" src="assets/skills/small/html.png" /></span>
+          <span><img class="icon" src="assets/skills/small/jqery.png" /></span>
+          <span><img class="icon" src="assets/skills/small/mocha.png" /></span>
+          <span><img class="icon" src="assets/skills/small/mongodb.png" /></span>
+          <span><img class="icon" src="assets/skills/small/node.png" /></span>
+          <span><img class="icon" src="assets/skills/small/python.png" /></span>
+          <span><img class="icon" src="assets/skills/small/react.png" /></span>
+          <span><img class="icon" src="assets/skills/small/sql.png" /></span>
+          <span><img class="icon" src="assets/skills/small/angularjs.png" /></span>
+          <span><img class="icon" src="assets/skills/small/npm.png" /></span>
+          <span><img class="icon" src="assets/skills/small/photoshop.png" /></span>
+          <span><img class="icon" src="assets/skills/small/postgres.png" /></span>
+          <span><img class="icon" src="assets/skills/small/redis.png" /></span>
+          <span><img class="icon" src="assets/skills/small/redux.png" /></span>
+          <span><img class="icon" src="assets/skills/small/sass.png" /></span>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="hide page" id="applications">
+      <div class="applications-container">
+        
+        <div class="project-thumbnails">
+
+          <div class="thumbnail-img">
+            <img data-thumbnum="0" alt="Moodify Logo" src="assets/moodify-logo.png" />
+          </div>
+          <div class="thumbnail-img">
+            <img data-thumbnum="1" alt="Hault Logo" src="assets/hault-logo.png" />
+          </div>
+          <div class="thumbnail-img">
+            <img data-thumbnum="2" alt="LePlonger Logo" src="assets/leplonger-logo.png" />
+          </div>
+          
+        </div>
+
+        <div class="project-descriptions">
+
+          <div data-pnum="0" class="hide-info"><!--WILL RECEIVE PROJECT-INFO CLASS -->
+            <div class="project-item">
+              <p>Moodify is a web application that the LePlonger team inherited. Moodify provided mood and tone analysis of music. We integrated authorization with Spotify and expanded the mood analysis functionality to analyze text based media.</p>
+            </div>
+            <div class="resources project-item">
+              <a href="https://lahumeur.herokuapp.com/" target="_blank">Check it out here!</a>
+              <a href="https://github.com/legacyredux/moodify">
+                <img class="icon" alt="GitHub"  src="assets/github-icon.png" />
+              </a>
+            </div>
+            <div class="project-item">
+              <img class="test3" src="assets/moodify-page.png" />
+            </div>
+          </div>
+
+          <div data-pnum="1" class="project-info"><!--WILL RECEIVE PROJECT-INFO CLASS -->
+            <div class="project-item">
+              <p>The Hault Chrome extension sends local history to an external database keeping your local history empty. The extension keeps track of your tabs during a session allowing you to continue a session from any computer on any browser. From the web client, users have access to their history vault, from where they can manage, organize, and search their visited content.</p>
+            </div>
+            <div class="resources project-item">
+              <a href="http://hault.herokuapp.com/home" target="_blank">Check it out here!</a>
+              <a href="https://chrome.google.com/webstore/detail/hault/ikbphpflkcegcdjahlhhlanpbeojooeg?hl=en" target="_blank">Chrome Web Store!</a>
+              <a href="https://github.com/teamrocketz">
+                <img class="icon" alt="GitHub"  src="assets/github-icon.png" />
+              </a>
+              <p>
+                Explore with these:<br></br>
+                Email: john<br></br>
+                Password: pas
+              </p>
+            </div>
+            <div class="project-item">
+              <img class="test3" src="assets/hault-page.jpg" />
+            </div>
+          </div>
+
+          <div data-pnum="2" class="hide-info"><!--WILL RECEIVE PROJECT-INFO CLASS -->  
+            <div class="project-item">
+              <p>LePlonger is a West Coast scuba diver's companion. LePlonger provides accurate dive site weather and ocean conditions based on data from the nearest ocean buoy directly from the National Data Buoy Center. Members can add new dive sites they've visited, and share their experiences with others.</p>
+            </div>
+            <div class="resources project-item">
+              <a href="https://frenchdive.herokuapp.com/" target="_blank">Check it out here!</a>
+              <a href="https://github.com/dwgate/leplonger">
+                <img class="icon" alt="GitHub"  src="assets/github-icon.png" />
+              </a>
+            </div>
+            <div class="project-item">
+              <img class="test3" src="assets/leplonger-page.png" />
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="hide page" id="background">
+      <div class="background-container">
+        <div class="work-container">
+
+          <div class="work-item">
+            <div data-place="hir" class="details">
+              <img alt="HR" src="assets/hr.png"/>
+            </div>
+            <div data-place="hir" class="hidden-details">
+              <p>Hack Reactor</p>
+              <p>Assistant Technical Instructor</p>
+              <p>Lecture students on solving data structure and algorithm problems. The first line of support and assistance for students learning JavaScript.</p>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div data-place="1" class="details">
+              <img alt="ASD" src="assets/asd.png"/>
+            </div>
+            <div data-place="1" class="hidden-details">
+              <p>ASD|SKY</p>
+              <p>Designer</p>
+              <p>Balance design with client needs and requirements to produce architecture presentation material, and develop construction document sets for a wide scale of projects.</p>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div data-place="cc" class="details">
+              <img alt="ASD" src="assets/cc.png"/>
+            </div>
+            <div data-place="cc" class="hidden-details">
+              <p>Cooper Carry</p>
+              <p>Architectural Intern</p>
+              <p>Design and develop presentaiton materials for architecture proposals, and create construction documents for large scale developments.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="school-container">
+
+          <div class="school-item">
+            <div data-place="hr" class="details">
+              <img alt="HR" src="assets/hr.png"/>
+            </div>
+            <div data-place="hr" class="hidden-details">
+              <p>Hack Reactor</p>
+              <p>March-June</p>
+              <p>Studied software engineering with a focus on full stack JavaScript.</p>
+            </div>
+          </div>
+
+          <div class="school-item">
+            <div data-place="vt" class="details">
+              <img alt="Virginia Tech" src="assets/vt.png"/>
+            </div>
+            <div data-place="vt" class="hidden-details">
+              <p>Virginia Tech</p>
+              <p>Bachelor of Architecture</p>
+              <p>Minor in Industrial Design</p>
+            </div>
+          </div>
+
+          <div class="school-item">
+            <div data-place="cbl" class="details">
+              <img alt="Design/build Lab" src="assets/dbl.png"/>
+            </div>
+            <div data-place="dbl" class="hidden-details">
+              <p>Design/buildLAB</p>
+              <p>Designed and built the Sharon FieldHouse in Sharon, Virginia.</p>
+              <a href="http://www.archdaily.com/601803/sharon-fieldhouse-design-buildlab" />Check it out</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
