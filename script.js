@@ -1,8 +1,6 @@
 const sections = document.querySelectorAll('.page');
 const maxDisplayIndex = sections.length - 1;
 window.scrollY = 0;
-// window.addEventListener('scroll', debounce(test, 700));
-// on transitionend for scroll, then move scroll position. remove from inside event
 let prevLocation = window.pageYOffset || document.documentElement.scrollTop;
 let displayIndex = 0;
 var previousPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -19,9 +17,9 @@ setTimeout(() => debounce(
     previousPosition = currentPosition;
     setTimeout(() => window.scrollTo(0, 1), 35);
   })
-, 600);
+, 100);
 
-const adjustContent = debounce(function(direction) {
+const adjustContent = debounce(function thing(direction) {
   if (direction) {
     displayIndex--;
     if (displayIndex < 0) { displayIndex = 0; }
@@ -79,8 +77,6 @@ experienceItems.forEach(logo => logo.addEventListener('mouseenter', function() {
   this.children[0].classList.remove('details');
   this.children[0].classList.add('hidden-details');
 
-  // this.classList.add('grow');
-
   experienceItems.forEach((place) => {
     const icon = place.children[0];
     const worko = icon.dataset.place;
@@ -96,8 +92,6 @@ experienceItems.forEach(logo => logo.addEventListener('mouseleave', function() {
   const currentHover = this.children[0].dataset.place;
   this.children[0].classList.add('details');
   this.children[0].classList.remove('hidden-details');
-
-  // this.classList.remove('grow');
 
   experienceItems.forEach((place) => {
     const icon = place.children[0];
@@ -124,6 +118,46 @@ function shrinkSkill() {
 
 
 
+
+
+
+
+document.addEventListener('scroll', toggleNav);
+const nav = document.querySelector('.nav');
+
+function toggleNav() {
+  if (displayIndex > 1) { return; }
+
+  const navWidth = window.getComputedStyle(nav).width;
+  const position = `calc(${window.innerWidth}px ${displayIndex === 0 ? '+' : '-'} ${navWidth})`;
+  nav.style.left = position;
+
+  if (displayIndex === 1) {
+    setTimeout(() => nav.style.color = '#87A09D', 750);
+  } else {
+    nav.style.color = 'white';
+  }
+}
+
+
+const navMenu = document.querySelectorAll('li');
+navMenu.forEach(location => location.addEventListener('click', navigate));
+
+function navigate() {
+  const page = +this.dataset.page;
+  displayIndex = page;
+
+  Array.from(sections).forEach((section, i) => {
+    if (i === displayIndex) {
+      section.classList.add('focus');
+      section.classList.remove('hide');
+    } else {
+      section.classList.add('hide');
+      section.classList.remove('focus');
+    }
+  });
+  toggleNav();
+}
 
 
 
