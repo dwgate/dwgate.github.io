@@ -122,7 +122,22 @@ function shrinkSkill() {
   this.style.transform = 'scale(1, 1)';
 }
 
+document.addEventListener('scroll', toggleNav);
 
+const nav = document.querySelector('.nav');
+
+function toggleNav() {
+  if (displayIndex > 1) { return; }
+
+  const navWidth = window.getComputedStyle(nav).width;
+  const position = `calc(${window.innerWidth}px - ${navWidth})`
+  if (displayIndex === 1) {
+
+    nav.style.left = position;
+    return;
+  }
+  nav.style.left = `calc(${window.innerWidth}px + ${navWidth})`;
+}
 
 
 

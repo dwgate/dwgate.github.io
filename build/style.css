@@ -145,6 +145,18 @@ html {
 .icon {
   width: 25px; }
 
+.nav {
+  position: absolute;
+  margin-right: 0px;
+  width: 500px;
+  height: 50px;
+  background-color: #132A27;
+  border: 1px solid black;
+  left: calc(100vw + 500px);
+  top: calc(100vh - 50px);
+  -webkit-transition: left 0.5s ease-in;
+  transition: left 0.5s ease-in; }
+
 /*--------------------LANDING--------------------*/
 #me {
   background-color: #2a2a2a;

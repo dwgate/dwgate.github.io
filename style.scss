@@ -40,6 +40,17 @@ html {
 .icon {
   width: 25px;
 }
+.nav {
+  position: absolute;
+  margin-right: 0px;
+  width: 500px;
+  height: 50px;
+  background-color: $darkestteal;
+  border: 1px solid black;
+  left: calc(100vw + 500px);
+  top: calc(100vh - 50px);
+  transition: left 0.5s ease-in;
+}
 
 /*--------------------LANDING--------------------*/
 #me {
