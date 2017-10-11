@@ -139,9 +139,6 @@ html {
 .app-wrapper {
   overflow: hidden; }
 
-/* .content {
-  border: 1px solid rgba(0,0,0,0);
-} */
 .icon {
   width: 25px; }
 
@@ -270,7 +267,9 @@ html {
         border-radius: 25px;
         max-width: 200px;
         max-height: 45px;
-        margin: 0 10px; }
+        margin: 0 10px;
+        -webkit-filter: grayscale(100%);
+                filter: grayscale(100%); }
     #applications .applications-container .project-descriptions {
       display: -webkit-box;
       display: -ms-flexbox;

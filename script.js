@@ -1,3 +1,4 @@
+/*scrolling*/
 const sections = document.querySelectorAll('.page');
 const maxDisplayIndex = sections.length - 1;
 window.scrollY = 0;
@@ -19,7 +20,7 @@ setTimeout(() => debounce(
   })
 , 100);
 
-const adjustContent = debounce(function thing(direction) {
+const adjustContent = debounce(function focusSection(direction) {
   if (direction) {
     displayIndex--;
     if (displayIndex < 0) { displayIndex = 0; }
@@ -51,6 +52,12 @@ thumbnailImg.forEach(nail => nail.addEventListener('mouseenter', hoverProject) )
 
 function hoverProject() {
   const index = this.dataset.thumbnum;
+  thumbnailImg.forEach((img, i) => {
+    img.style.filter = i === index ? 'none' : '';
+  })
+  this.style.filter = 'none';
+
+
   projectDescriptions.forEach((project, i) => {
     if (project.dataset.pnum === index) {
       project.classList.remove('hide-info');
@@ -63,6 +70,10 @@ function hoverProject() {
 }
 
 function hideDescriptions() {
+  thumbnailImg.forEach(img => {
+    img.style.filter = '';
+  });
+
   projectDescriptions.forEach(project => {
     project.classList.remove('project-info');
     project.classList.add('hide-info');
