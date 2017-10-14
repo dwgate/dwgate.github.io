@@ -42,6 +42,27 @@ const adjustContent = debounce(function focusSection(direction) {
 
 
 
+/*
+.sliding-middle-out {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+}
+.sliding-middle-out:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+.sliding-middle-out:hover:after {
+  width: 100%;
+  background: blue;
+}
+*/
+
 /*projects*/
 const thumbnailImg = document.querySelectorAll('.thumbnail-img img');
 const projectDescriptions = Array.from(document.querySelectorAll('.project-descriptions')[0].children);
@@ -53,9 +74,12 @@ thumbnailImg.forEach(nail => nail.addEventListener('mouseenter', hoverProject) )
 function hoverProject() {
   const index = this.dataset.thumbnum;
   thumbnailImg.forEach((img, i) => {
-    img.style.filter = i === index ? 'none' : '';
-  })
-  this.style.filter = 'none';
+    img.style.opacity = (i === index) ? 1.0 : 0.65;
+    img.parentElement.style.borderBottom = (i === index) ? '1px solid #87A09D' : 'none';
+  });
+
+  this.style.opacity = 1.0;
+  this.parentElement.style.borderBottom = '1px solid #87A09D';
 
 
   projectDescriptions.forEach((project, i) => {
@@ -71,7 +95,8 @@ function hoverProject() {
 
 function hideDescriptions() {
   thumbnailImg.forEach(img => {
-    img.style.filter = '';
+    img.style.opacity = 0.65;
+    img.parentElement.style.borderBottom = 'none';
   });
 
   projectDescriptions.forEach(project => {
@@ -85,7 +110,6 @@ const experienceItems = document.querySelectorAll('.work-item, .school-item');
 
 experienceItems.forEach(logo => logo.addEventListener('mouseenter', function() {
   const currentHover = this.children[0].dataset.place;
-  this.children[0].classList.remove('details');
   this.children[0].classList.add('hidden-details');
 
   experienceItems.forEach((place) => {
@@ -94,14 +118,12 @@ experienceItems.forEach(logo => logo.addEventListener('mouseenter', function() {
     const description = place.children[1];
     if (worko === currentHover) {
       place.children[1].classList.remove('hidden-details');
-      place.children[1].classList.add('details');
     }
   });
 }));
 
 experienceItems.forEach(logo => logo.addEventListener('mouseleave', function() {
   const currentHover = this.children[0].dataset.place;
-  this.children[0].classList.add('details');
   this.children[0].classList.remove('hidden-details');
 
   experienceItems.forEach((place) => {
@@ -110,7 +132,6 @@ experienceItems.forEach(logo => logo.addEventListener('mouseleave', function() {
     const description = place.children[1];
     if (worko === currentHover) {
       place.children[1].classList.add('hidden-details');
-      place.children[1].classList.remove('details');
     }
   });
 }));
@@ -132,9 +153,9 @@ function shrinkSkill() {
 
 
 
-
-document.addEventListener('scroll', toggleNav);
+/*nav menu*/
 const nav = document.querySelector('.nav');
+document.addEventListener('scroll', toggleNav);
 
 function toggleNav() {
   if (displayIndex > 1) { return; }
@@ -169,6 +190,11 @@ function navigate() {
   });
   toggleNav();
 }
+
+
+
+
+
 
 
 

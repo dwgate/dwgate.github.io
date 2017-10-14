@@ -268,8 +268,7 @@ html {
         max-width: 200px;
         max-height: 45px;
         margin: 0 10px;
-        -webkit-filter: grayscale(100%);
-                filter: grayscale(100%); }
+        opacity: 0.65; }
     #applications .applications-container .project-descriptions {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -283,7 +282,6 @@ html {
       #applications .applications-container .project-descriptions .project-info {
         border: 1px solid white;
         background-color: rgba(255, 255, 255, 0.5);
-        text-align: left;
         opacity: 1.0;
         border-radius: 10px 20px;
         -webkit-transition: opacity 1s ease-in;
