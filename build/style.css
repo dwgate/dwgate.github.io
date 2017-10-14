@@ -139,9 +139,6 @@ html {
 .app-wrapper {
   overflow: hidden; }
 
-/* .content {
-  border: 1px solid rgba(0,0,0,0);
-} */
 .icon {
   width: 25px; }
 
@@ -270,7 +267,8 @@ html {
         border-radius: 25px;
         max-width: 200px;
         max-height: 45px;
-        margin: 0 10px; }
+        margin: 0 10px;
+        opacity: 0.65; }
     #applications .applications-container .project-descriptions {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -284,7 +282,6 @@ html {
       #applications .applications-container .project-descriptions .project-info {
         border: 1px solid white;
         background-color: rgba(255, 255, 255, 0.5);
-        text-align: left;
         opacity: 1.0;
         border-radius: 10px 20px;
         -webkit-transition: opacity 1s ease-in;

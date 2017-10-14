@@ -34,9 +34,7 @@ html {
 .app-wrapper {
   overflow: hidden;
 }
-/* .content {
-  border: 1px solid rgba(0,0,0,0);
-} */
+
 .icon {
   width: 25px;
 }
@@ -145,6 +143,7 @@ html {
         max-width: 200px;
         max-height: 45px;
         margin: 0 10px;
+        opacity: 0.65;
       }
     }
     .project-descriptions {
@@ -156,7 +155,6 @@ html {
       .project-info {
         border: 1px solid white;
         background-color: rgba(255,255,255,0.5);
-        text-align: left;
         
         opacity: 1.0;
         border-radius: 10px 20px;
@@ -164,7 +162,6 @@ html {
 
         display: flex; // Container flex
         align-items: center;
-        // flex-direction: column;
 
         flex-basis: 100%; // Item flex
         order: 0;
@@ -279,10 +276,6 @@ html {
     }
   }
 
-  // .grow {
-  //   transform: scale(1.15, 1.15);
-  //   transition: transform 0.2s ease-in, border 0.2s ease-in;
-  // }
  
   .hidden-details {
     width: 0;
@@ -345,5 +338,3 @@ html {
   }
 }
 /*--------------------NAV--------------------*/
-
-
