@@ -134,7 +134,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 html {
   overflow: none;
   scroll-y: none;
-  font-family: "Source Sans Pro", sans-serif; }
+  font-family: "Source Sans Pro", sans-serif;
+  background-image: linear-gradient(247deg, #05171e, #53768c); }
 
 .app-wrapper {
   overflow: hidden; }
@@ -144,7 +145,6 @@ html {
 
 /*--------------------LANDING--------------------*/
 #me {
-  background-color: #2a2a2a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,7 +162,7 @@ html {
         flex-wrap: wrap; }
     #me .me-container .me-item {
       border: 1px solid white;
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.4);
       border-radius: 10px;
       width: 200px;
       margin: 10px;
@@ -201,7 +201,7 @@ html {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
       #me .me-container .skills span {
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.4);
         border: 1px solid white;
         border-radius: 100px;
         margin: 5px;
@@ -232,7 +232,6 @@ html {
 /*--------------------LANDING--------------------*/
 /*--------------------PROJECTS--------------------*/
 #applications {
-  background-color: #2a2a2a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -281,7 +280,7 @@ html {
           flex-basis: 100%; }
       #applications .applications-container .project-descriptions .project-info {
         border: 1px solid white;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.4);
         opacity: 1.0;
         border-radius: 10px 20px;
         -webkit-transition: opacity 1s ease-in;
@@ -326,7 +325,6 @@ html {
 /*--------------------PROJECTS--------------------*/
 /*--------------------EDUCATION--------------------*/
 #background {
-  background-color: #2a2a2a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,7 +361,7 @@ html {
       border: 1px solid white;
       border-radius: 20px;
       color: white;
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(0, 0, 0, 0.4);
       margin: 35px;
       padding: 10px;
       display: -webkit-box;
@@ -379,7 +377,7 @@ html {
           -ms-flex: 1;
               flex: 1; }
       .background-container .work-container .work-item:hover {
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.4);
         color: black;
         -webkit-transform: scale(1.15, 1.15);
                 transform: scale(1.15, 1.15);
@@ -398,7 +396,7 @@ html {
       z-index: 1;
       border: 1px solid white;
       border-radius: 20px;
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(0, 0, 0, 0.4);
       color: white;
       margin: 35px;
       padding: 10px;
@@ -415,7 +413,7 @@ html {
           -ms-flex: 1;
               flex: 1; }
       .background-container .school-container .school-item:hover {
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.4);
         color: black;
         -webkit-transform: scale(1.15, 1.15);
                 transform: scale(1.15, 1.15);
@@ -423,6 +421,9 @@ html {
         transition: border 0.2s ease-in, -webkit-transform 0.2s ease-in;
         transition: transform 0.2s ease-in, border 0.2s ease-in;
         transition: transform 0.2s ease-in, border 0.2s ease-in, -webkit-transform 0.2s ease-in; }
+      .background-container .school-container .school-item span .lab {
+        color: orange;
+        font-style: bold; }
   .background-container .hidden-details {
     width: 0;
     opacity: 0; }
